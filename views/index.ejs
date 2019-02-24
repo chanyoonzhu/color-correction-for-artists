@@ -16,8 +16,13 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <div class="color-picker-panel">
+    <div class="sample-color">
         <div class="panel-row">
+          
+        </div>
+    </div>
+    <div class="color-picker-panel">
+        <div class="panel-row hide">
           <div class="swatches default-swatches"></div>
           <button class="button eyedropper">Get Color</button>
         </div>
@@ -31,7 +36,7 @@
             <canvas id="hue-canvas"></canvas>
           </div>
         </div>
-        <div class="panel-row">
+        <div class="panel-row hide">
           <div id="rgb-fields" class="field-group value-fields rgb-fields active">
             <div class="field-group">
               <label for="" class="field-label">R:</label>
@@ -52,7 +57,7 @@
           </div>
           <button id="mode-toggle" class="button mode-toggle">Mode</button>
         </div>
-        <div class="panel-row">
+        <div class="panel-row hide">
           <h2 class="panel-header">User Colors</h2>
           <div id="user-swatches" class="swatches custom-swatches">
           </div>

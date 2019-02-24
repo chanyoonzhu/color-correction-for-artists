@@ -5,6 +5,15 @@ body {
   letter-spacing: .05em;
   transition: background .5s ease; }
 
+.sample-color {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background: #ccc; }
+
 .color-picker-panel {
   background: #1F232A;
   width: 310px;
@@ -13,12 +22,12 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 60%;
   transform: translate(-50%, -50%); }
 
 .panel-row {
   position: relative;
-  margin: 0 10px 10px; }
+  margin: 10px 10px 10px; }
   .panel-row:first-child {
     margin-top: 10px;
     margin-bottom: 6px; }
@@ -187,3 +196,6 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
   /* <-- Apparently some margin are still there even though it's hidden */ }
+
+.hide {
+  display: none; }
