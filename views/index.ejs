@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html>
+<!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
+<!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
+<!--[if IE 8]><html class="preIE9"><![endif]-->
+<!--[if gte IE 9]><!--><html><!--<![endif]-->
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title><%= title %></title>
+    <meta name="author" content="name">
+    <meta name="description" content="description here">
+    <meta name="keywords" content="keywords,here">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="color-picker-panel">
+        <div class="panel-row">
+          <div class="swatches default-swatches"></div>
+          <button class="button eyedropper">Get Color</button>
+        </div>
+        <div class="panel-row">
+          <div class="spectrum-map">
+            <button id="spectrum-cursor" class="color-cursor"></button>
+            <canvas id="spectrum-canvas"></canvas>
+          </div>
+          <div class="hue-map">
+            <button id="hue-cursor" class="color-cursor"></button>
+            <canvas id="hue-canvas"></canvas>
+          </div>
+        </div>
+        <div class="panel-row">
+          <div id="rgb-fields" class="field-group value-fields rgb-fields active">
+            <div class="field-group">
+              <label for="" class="field-label">R:</label>
+              <input type="number" max="255" min="0" id="red" class="field-input rgb-input"/>
+            </div>
+            <div class="field-group">
+              <label for="" class="field-label">G:</label>
+              <input type="number" max="255" min="0" id="green" class="field-input rgb-input"/>
+            </div>
+            <div class="field-group">
+              <label for="" class="field-label">B:</label>
+              <input type="number" max="255" min="0" id="blue" class="field-input rgb-input"/>
+            </div>
+          </div>
+          <div id="hex-field" class="field-group value-fields hex-field">
+            <label for="" class="field-label">Hex:</label>
+            <input type="text" id="hex" class="field-input"/>
+          </div>
+          <button id="mode-toggle" class="button mode-toggle">Mode</button>
+        </div>
+        <div class="panel-row">
+          <h2 class="panel-header">User Colors</h2>
+          <div id="user-swatches" class="swatches custom-swatches">
+          </div>
+          <button id="add-swatch" class="button add-swatch">
+            <span id="color-indicator" class="color-indicator"></span><span>Add to Swatches</span>
+          </button>
+        </div>
+      </div>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js" type="text/javascript"></script>
+      <script src="/javascripts/tinycolor.js"></script>
+      <script src="/javascripts/main.js"></script>
   </body>
 </html>
